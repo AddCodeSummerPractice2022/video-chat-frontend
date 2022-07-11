@@ -1,0 +1,79 @@
+/*== GLOBAL SETTINGS ==*/
+
+html, body {
+    height: 100%;
+  }
+
+li {
+    text-decoration: none;
+    margin: 20px;
+}
+
+/*== COMMON ELEMENTS STYLES ==*/
+
+.ftr {
+    background-color: #90a4ae;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.h__main {
+    text-align: center;
+    letter-spacing: 0.15rem;
+    color: #212121; 
+}
+
+.calltext {
+    text-align: center;
+    color: #d2d2d2; 
+}
+
+/*== FLEX CONTAINERS ==*/
+
+.wrap {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 1 auto;
+}
+
+.fhead {
+    display: flex;
+    background-color: #90a4ae;
+    height: 125px;
+    justify-content: center;
+    align-items: center;
+}
+
+.call {
+    justify-content: center;
+    align-items: center;
+}
+
+/*== HEADER ELEMENTS ==*/
+
+
+.fhead__container {
+    max-width: 800px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+/* == FOOTER ELEMENTS ==*/
+
+.ftr__container {
+    max-width: 800px;
+}
+
+.ftr__text {
+    color: #212121;
+    letter-spacing: 0.15rem;
+}

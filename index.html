@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="vendors/materialize/materialize.min.css">
+        <link rel="stylesheet" href="styles/common.css">
+        <link rel="stylesheet" href="styles/rooms.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title> Vchat Practice </title>
+    </head>
+    <body class="blue-grey lighten-4">
+        <div class="wrap">
+            <div class="content">
+                <div class="fhead">
+                    <div class="fhead__container">
+                        <h1 class="h__main">Videochat</h1>
+                    </div>
+                </div>
+                <div class="fbody">
+                    <div class="fbody__container">
+                        <div class="fbody__roomcreate">
+                            <div class="roomcreate__title">
+                                <h4 class="h__main">Create videochat room</h4>
+                            </div>
+                            <div class="roomcreate__name">
+                                <div class="row">
+                                    <form class="col s12">
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                                <label for="textarea1"> Enter room name: </label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="roomcreate__btn">
+                                    <a class="waves-effect waves-light btn">Create</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fbody__roomlist">
+                            <div class="roomlist__title">
+                                <h4 class="h__main">Videochat list</h4>
+                            </div>
+                            <div class="roomlist__list">
+                                <ul>
+                                    <li>
+                                      <div class="listelement">
+                                        <div class="elementpic">
+                                            <p> place for some picture</p>
+                                        </div>
+                                        <div class="element__info">
+                                            <div class="info__title">
+                                                <p>My cool videochat room</p>
+                                            </div>
+                                            <div class="info__cntr">
+                                                <p> Participants: 0</p>
+                                            </div>
+                                            <a class="waves-effect waves-light btn">JOIN</a>
+                                        </div>
+                                      </div>  
+                                    </li>
+                                    <li>
+                                        <div class="listelement">
+                                          <div class="elementpic">
+                                              <p> place for some picture</p>
+                                          </div>
+                                          <div class="element__info">
+                                              <div class="info__title">
+                                                  <p>Backend + Frontend conference</p>
+                                              </div>
+                                              <div class="info__cntr">
+                                                  <p> Participants: 5</p>
+                                              </div>
+                                              <a href="room.html" class="waves-effect waves-light btn">JOIN</a>
+                                          </div>
+                                        </div>  
+                                      </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="ftr">
+                <div class="ftr__container">
+                    <div class="ftr__text">
+                        <p>footer</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script type="text/javascript" src="vendors/materialize/materialize.min.js"></script>
+    </body>    
+</html>
