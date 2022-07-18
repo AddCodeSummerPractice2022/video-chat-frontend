@@ -9,10 +9,14 @@ li {
     margin: 20px;
 }
 
+table {
+    color:white;
+}
+
 /*== COMMON ELEMENTS STYLES ==*/
 
 .ftr {
-    background-color: #90a4ae;
+    background-color: #201e1b;
     display: flex;
     height: 50px;
     justify-content: center;
@@ -46,10 +50,12 @@ li {
 
 .fhead {
     display: flex;
-    background-color: #90a4ae;
+    background-color: white;
     height: 125px;
     justify-content: center;
     align-items: center;
+    border-bottom: 1px solid #e6eef4;
+    padding: 0 20px;
 }
 
 .call {
@@ -74,6 +80,6 @@ li {
 }
 
 .ftr__text {
-    color: #212121;
+    color: #ffffff;
     letter-spacing: 0.15rem;
 }

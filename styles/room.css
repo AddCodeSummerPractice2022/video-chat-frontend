@@ -8,7 +8,7 @@
 }
 
 .call__partlist {
-    background-color: #78909c;
+    background-color: #201e1b;
     width: 30vw;
     min-width: 160px;
     height: 86.1vh;
@@ -28,6 +28,9 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 15px;
+    overflow: scroll;
+    overflow-x: hidden;
+    background-color: white;
 }
 
 .call__input {
@@ -36,7 +39,7 @@
     height: 15%;
     vertical-align: middle;
     justify-content: center;
-    background-color: #607d8b;
+    background-color: white;
 
 }
 
@@ -73,8 +76,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
 }
 
 .input__btn{
     margin: 15px;
+}
+
+video {
+    height: 180px;
+    width: 320px;
+    border: 3px solid #fcd820;
+    background-color: #fcd820;
+    margin: 5px;
 }

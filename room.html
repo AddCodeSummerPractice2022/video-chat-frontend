@@ -1,98 +1,115 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="vendors/materialize/materialize.min.css">
-        <link rel="stylesheet" href="styles/common.css">
-        <link rel="stylesheet" href="styles/room.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
-        <title> Room interface </title>
-    </head>
-    <body class="blue-grey lighten-4">
-        <div class="wrap">
-            <div class="content">
-                <div class="fhead">
-                    <div class="fhead__container">
-                        <h2 class="h__main"> Conference name </h2>
-                    </div>
-                </div>
-                <div class="call">
-                    <div class="call__container">
-                        <div class="call__partlist">
-                            <h5>Participants: </h5>
-                            <ul>
-                                <li>Leonid Medov</li>
-                                <li>Andrey Almosov</li>
-                                <li>Artyom Askarov</li>
-                            </ul>
-                        </div>
-                        <div class="call__interface">
-                            <div class="call__view">
-                                <div class="call__video">
-                                    <div class="video__vid">
-                                        <p class="calltext"> video </p> 
-                                    </div>
-                                    <div class="video__title">
-                                        <p class="calltext"> Leonid Medov</p>    
-                                    </div>
-                                </div>
-                                <div class="call__video">
-                                    <div class="video__vid">
-                                        <p class="calltext"> video </p> 
-                                    </div>
-                                    <div class="video__title">
-                                        <p class="calltext"> Artyom Askarov</p>    
-                                    </div>
-                                </div>
-                                <div class="call__video">
-                                    <div class="video__vid">
-                                        <p class="calltext"> video </p> 
-                                    </div>
-                                    <div class="video__title">
-                                        <p class="calltext"> Andrey Almosov</p>    
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="call__input">
-                                <div class="input__items">
-                                    <div class="input__btn">
-                                        <a class="btn-floating btn-large waves-effect waves-light teal lighten-2 ">
-                                            <span class="material-symbols-outlined">
-                                                mic
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <div class="input__btn">
-                                        <a class="btn-floating btn-large waves-effect waves-light teal lighten-2">
-                                            <span class="material-symbols-outlined">
-                                                videocam
-                                            </span>
-                                        </a> 
-                                    </div>
-                                    <div class="input__btn">
-                                        <a href="index.html" class="btn-floating btn-large waves-effect waves-light red">
-                                            <span class="material-symbols-outlined">
-                                                call_end
-                                            </span>
-                                        </a> 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <footer class="ftr">
-                <div class="ftr__container">
-                    <div class="ftr__text">
-                        <p>footer</p>
-                    </div>
-                </div>
-            </footer>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Room · Vchat Practice</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="vendors/materialize/materialize.min.css"
+    />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/room.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+  </head>
+  <body class="blue-grey lighten-4">
+    <div class="wrap">
+      <div class="content">
+        <div class="fhead">
+          <div class="fhead__container">
+            <h2 class="h__main" id="roomname"></h2>
+          </div>
         </div>
-        <script type="text/javascript" src="vendors/materialize/materialize.min.js"></script>
-    </body>
+        <div class="call">
+          <div class="call__container">
+            <div class="call__partlist">
+              <table
+                class="table table-condensed table-striped table-bordered centered striped"
+              >
+                <thead>
+                  <tr>
+                    <th>Username</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+            <div class="call__interface">
+              <div id="videos" class="call__view">
+                <video id="localVideo1" autoplay="true" muted></video>
+              </div>
+              <div class="call__input">
+                <div class="input__items">
+                  <div class="input__btn">
+                    <a
+                      class="btn-floating btn-large waves-effect waves-light"
+                      style="background-color: #fcd820"
+                    >
+                      <span
+                        class="material-symbols-outlined"
+                        style="color: #201e1b"
+                      >
+                        mic
+                      </span>
+                    </a>
+                  </div>
+                  <div class="input__btn">
+                    <a
+                      id="vcam"
+                      class="btn-floating btn-large waves-effect waves-light"
+                      style="background-color: #fcd820"
+                    >
+                      <span
+                        class="material-symbols-outlined"
+                        style="color: #201e1b"
+                      >
+                        videocam
+                      </span>
+                    </a>
+                  </div>
+                  <div class="input__btn">
+                    <a
+                      id="close"
+                      class="btn-floating btn-large waves-effect waves-light"
+                      style="background-color: #201e1b"
+                    >
+                      <span
+                        class="material-symbols-outlined"
+                        style="color: #fcd820"
+                      >
+                        call_end
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="ftr">
+        <div class="ftr__container">
+          <div class="ftr__text">
+            <p>AddCode Summer Practice 2022 ©VideoChat Team</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="vendors/materialize/materialize.min.js"></script>
+    <script src="vendors/signalr/signalr.min.js"></script>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/room.js"></script>
+  </body>
 </html>
