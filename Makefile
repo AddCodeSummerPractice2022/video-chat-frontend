@@ -13,7 +13,7 @@ build:
 # start
 
 start:
-	docker run -d --name $(DOCKER_CONTAINER_NAME) -p 80:80 $(DOCKER_IMAGE)
+	docker run -d --name $(DOCKER_CONTAINER_NAME) -p 80:80 443:443 -v "certbot-etc:/etc/letsencrypt" $(DOCKER_IMAGE)
 
 # stop
 
@@ -27,4 +27,4 @@ deployment:
 	DOCKER_HOST=ssh://$(user)@$(ip) docker build -t $(DOCKER_IMAGE) -f deploy/Dockerfile .
 	DOCKER_HOST=ssh://$(user)@$(ip) docker stop $(DOCKER_CONTAINER_NAME)
 	DOCKER_HOST=ssh://$(user)@$(ip) docker rm $(DOCKER_CONTAINER_NAME)
-	DOCKER_HOST=ssh://$(user)@$(ip) docker run -d --name $(DOCKER_CONTAINER_NAME) -p 80:80 $(DOCKER_IMAGE)
+	DOCKER_HOST=ssh://$(user)@$(ip) docker run -d --name $(DOCKER_CONTAINER_NAME) -p 80:80 -p 443:443 -v "/etc/letsencrypt:/etc/letsencrypt" $(DOCKER_IMAGE)
